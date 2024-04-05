@@ -1,0 +1,60 @@
+.backg {
+    /* height: 100vh; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./../../images/ff.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+/* PosePage.css */
+
+
+.pose-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Adjusting the pose card width */
+  .pose-card {
+    flex: 1; /* Allow cards to grow and fill the available space */
+    max-width: calc(33.33% - 40px); /* Adjusted maximum width to fit 3 cards in a row with space between them */
+    margin: 20px; /* Adjusted margin to create space between cards */
+    /* ...existing styles... */
+  }
+
+.mContainer {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white; 
+  }
+  
+  .dropdowns {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .difficulty-dropdown,
+  .focus-dropdown {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .difficulty-dropdown:focus,
+  .focus-dropdown:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  h2 {
+    margin: 0;
+  }
+  

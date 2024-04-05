@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga Pose Detection</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .video-container {
+        width: 50%; /* Adjust the width as needed */
+        margin-right: 20px; /* Add some margin */
+      }
+
+      .video {
+        width: 100%;
+        border: 2px solid black; /* Add border for the video */
+        border-radius: 8px; /* Optional: Add border radius */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="video-container">
+        <img
+          class="video"
+          id="video"
+          src="{{ url_for('video_feed') }}"
+          alt="Video Feed"
+        />
+      </div>
+    </div>
+  </body>
+</html>
