@@ -70,6 +70,14 @@
     color: #ffffff; /* Adjusted text color */
 }
 
+.tips{
+    margin-top: 50px;
+}
+
+.benefits{
+    margin-top: 50px;
+}
+
 /* Pose Image Section */
 .poseImg {
     margin: 20px;

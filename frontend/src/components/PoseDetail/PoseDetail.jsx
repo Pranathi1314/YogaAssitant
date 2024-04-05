@@ -24,7 +24,7 @@ const PoseDetail = () => {
                     </li>
                 </ul>
                 </div>
-                <hr className='hori'></hr>
+                {/* <hr className='hori'></hr> */}
                 
                 <div className='tips'>
                 <h3 className='tipsHeading'>Beginner's Tip</h3>
@@ -32,7 +32,7 @@ const PoseDetail = () => {
                 If your sitting bones are not firmly grounded, i.e. you are tilting onto the twisting side, try sitting up on a thickly folded blanket
                 </p>
                 </div>
-                <hr className='hori'></hr>
+                {/* <hr className='hori'></hr> */}
                 <div className='benefits'>
                     <h3 className='benefitsHeading'>Benefits</h3>
                     <ul>
