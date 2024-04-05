@@ -1,0 +1,111 @@
+/* PoseDetail.css */
+
+/* Background Section */
+.backg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./../../images/ff.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 50px 0; /* Added padding for spacing */
+}
+
+/* Heading Section */
+.heading {
+    display: flex;
+    align-items: center;
+    
+    margin: 0 auto; /* Center the heading */
+    max-width: 800px; /* Set max width */
+    color: white; /* Text color for better visibility */
+    border-radius: 8px;
+    
+    justify-content: center;
+    
+}
+
+.heading h1,
+.heading h4 {
+    margin: 0;
+    font-weight: 500;
+    color: #ffffff; /* Adjusted text color */
+}
+
+.heading h4 {
+    margin-left: 30px;
+    font-size: 1.2em;
+}
+
+/* Instructions Section */
+.instructions {
+    display: flex;
+    justify-content: center; /* Center content */
+    padding: 20px;
+      /* Reduced top margin for spacing */
+}
+
+.details {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    color: white; /* Text color for better visibility */
+    border-radius: 8px;
+   
+}
+
+.stepwiseGuideHeading,
+.tipsHeading,
+.benefitsHeading {
+    margin: 20px 0; /* Increased top and bottom margin */
+    color: #ffffff; /* Adjusted text color */
+    border-bottom: 1px solid #ddd; /* Added bottom border for section headings */
+    padding-bottom: 10px; /* Added padding to space out the headings */
+}
+
+.stepwiseGuide ul li,
+.tips p,
+.benefits ul li {
+    margin: 15px 0; /* Increased top and bottom margin */
+    line-height: 1.6; /* Improved readability */
+    color: #ffffff; /* Adjusted text color */
+}
+
+/* Pose Image Section */
+.poseImg {
+    margin: 20px;
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+.poseImg img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; /* Added smooth transition */
+}
+
+.poseImg img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.info {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    
+}
+
+.info p {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #ffffff; /* Adjusted text color */
+}
+
+/* Horizontal Rule */
+.hori {
+    margin: 20px 0; /* Reduced margin for spacing */
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}

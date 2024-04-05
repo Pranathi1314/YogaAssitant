@@ -7,6 +7,7 @@ import Blogs from './components/Blogs/Blogs';
 import YogaDetection from './components/YogaDetection/YogaDetection';
 import Mainpage from './components/Mainpage/Mainpage';
 import PosePage from './components/PosePage/PosePage';
+import PoseDetail from './components/PoseDetail/PoseDetail';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path='/yogaDetection' element={<YogaDetection/>}/>
       <Route path='/' element={<Mainpage/>}/>
       <Route path='/poses' element={<PosePage/>}/>
+      <Route path='/posedetail' element={<PoseDetail/>}/>
     </Routes>
     </BrowserRouter>
   );
