@@ -34,7 +34,7 @@ function PosePage() {
       id: 3,
       name: 'Tree Pose',
       image: treep,
-      description: 'Balance on one foot with the other...',
+      description: 'Balance on one foot ...',
       difficulty: 'Intermediate',
       category: 'Balancing',
     },

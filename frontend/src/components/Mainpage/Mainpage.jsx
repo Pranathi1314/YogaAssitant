@@ -12,8 +12,8 @@ const Mainpage = () => {
             <span>and let your inner mind shine</span>
         </div>
         <div className='buttonDiv'>
-            <button>Explore Poses</button>
-            <button>Get Started with Yoga</button>
+            <button className='buttonIndiv'>Explore Poses</button>
+            <button className='buttonIndiv'>Get Started with Yoga</button>
         </div>
         </section>
      );

@@ -54,7 +54,7 @@
     margin-top: 20px;
 }
 
-button {
+.buttonIndiv {
     padding: 10px 20px;
     font-size: 18px;
     width: auto;
@@ -70,6 +70,6 @@ button {
     background-color: rgb(73, 14, 14); */
 /* } */
 
-button:hover {
+.buttonIndiv:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Change background color on hover */
 }

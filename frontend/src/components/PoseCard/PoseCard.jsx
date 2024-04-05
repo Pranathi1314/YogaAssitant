@@ -12,6 +12,7 @@ const PoseCard = ({ pose }) => {
         <span className="pose-difficulty">Difficulty: {pose.difficulty}</span>
         <span className="pose-category">Category: {pose.category}</span>
       </div>
+      <button className="read-more-button">Read More</button>
     </div>
   );
 }

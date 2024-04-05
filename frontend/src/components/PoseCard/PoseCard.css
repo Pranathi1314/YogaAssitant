@@ -48,3 +48,22 @@ padding: 10px;
   font-size: 0.9em;
   color: #bbb; /* Changed text color to a lighter gray */
 }
+
+
+.read-more-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none; /* Remove default link underline */
+  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.read-more-button:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}

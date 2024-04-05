@@ -15,10 +15,10 @@ function App() {
     <Routes>
       <Route path='/register' element={<Register/>}></Route>
       <Route path='/login' element={<Login/>}/>
-      <Route path='/' element={<Homepage/>}/>
+      <Route path='/home' element={<Homepage/>}/>
       <Route path='/blogs' element={<Blogs/>}/>
       <Route path='/yogaDetection' element={<YogaDetection/>}/>
-      <Route path='/main' element={<Mainpage/>}/>
+      <Route path='/' element={<Mainpage/>}/>
       <Route path='/poses' element={<PosePage/>}/>
     </Routes>
     </BrowserRouter>
