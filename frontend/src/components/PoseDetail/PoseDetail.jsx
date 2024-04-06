@@ -3,6 +3,7 @@ import './PoseDetail.css'
 import MountainPose from '../../images/mountain.jpg'
 
 const PoseDetail = () => {
+    
   return (
     <div >
         <section className='backg'>
