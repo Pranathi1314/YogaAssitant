@@ -21,7 +21,7 @@ function App() {
       <Route path='/yogaDetection' element={<YogaDetection/>}/>
       <Route path='/' element={<Mainpage/>}/>
       <Route path='/poses' element={<PosePage/>}/>
-      <Route path='/posedetail' element={<PoseDetail/>}/>
+      <Route path='/posedetail/:poseId' element={<PoseDetail/>}/>
     </Routes>
     </BrowserRouter>
   );

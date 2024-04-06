@@ -1,6 +1,7 @@
 import React from 'react';
 import './Mainpage.css';
 import Navbar from '../Navbar/Navbar';
+import { Link } from 'react-router-dom';
 
 
 const Mainpage = () => {
@@ -12,8 +13,8 @@ const Mainpage = () => {
             <span>and let your inner mind shine</span>
         </div>
         <div className='buttonDiv'>
-            <button className='buttonIndiv'>Explore Poses</button>
-            <button className='buttonIndiv'>Get Started with Yoga</button>
+            <Link to="/poses" className='buttonIndiv'>Explore Poses</Link>
+            <Link to="/yogaDetection" className='buttonIndiv'>Get Started with Yoga</Link>
         </div>
         </section>
      );

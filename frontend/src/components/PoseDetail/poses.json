@@ -1,29 +1,212 @@
-{
-    "mountainPose":{
-        "name" : "Mountain Pose",
-        "otherName" : "Tadasana",
-        "stepwise": {
-            "1": "Stand with your feet hip distance apart.",
-            "2": "Feel your feet, lift and spread the toes then lower them back down and connect with the ground.",
-            "3": "Lift knee caps, without locking the knees back.",
-            "4": "Lift the thigh muscles up and back. Inner thighs slightly turn in",
-            "5":"Draw the pelvic floor muscles together and draw your abdomen slightly in and up to engage Mula Bandha (the pelvic floor muscles) and Uddiyana Bandha (the abdominals up to the diaphragm).",
-            "6":"Open your chest, top of sternum lifts towards the ceiling. Keep ribs soft.",
-            "7":"Broaden your collarbones, firm your shoulder blades onto your back.",
-            "8":"Ears over the shoulders, crown of the head lifting up.",
-            "9":"Soften the face, especially the eyes and the jaw."
-        },
-        "tips":{
-            "1":"If you find it difficult to get your pelvis in a neutral position, try bending your knees slightly. Drop the tailbone, then once you feel you have it, straighten the knees again without changing the position of the pelvis.",
-            "2":"Take a block between the thighs. Squeeze the block and roll it slightly backward to feel the engagement and rotation of the thighs."
+[
 
-        },
-        "benefits":{
-            "1" : "Prepares the body for all other standing poses.",
-            "2" : "Helps to identify imbalances in the body.",
-            "3" : "Improves posture.",
-            "4" : "Calms the body and mind."
-        },
-        "image" : "../../images/mountain.jpg"
-    }
-}
+    {
+        "id": 1,
+        "name": "Mountain Pose",
+        "asana" : "Tadasana",
+        "steps": [
+          "Stand with your feet hip distance apart.",
+          "Feel your feet, lift and spread the toes then lower them back down and connect with the ground.",
+          "Lift knee caps, without locking the knees back.",
+          "Lift the thigh muscles up and back. Inner thighs slightly turn in.",
+          "Imagine softening the skin of the lower back and the flesh of buttocks down (dropping the tailbone rather than tucking it under) so the pelvis is in a neutral position.",
+          "Draw the pelvic floor muscles together and draw your abdomen slightly in and up to engage Mula Bandha (the pelvic floor muscles) and Uddiyana Bandha (the abdominals up to the diaphragm).",
+          "Open your chest, top of sternum lifts towards the ceiling. Keep ribs soft.",
+          "Broaden your collarbones, firm your shoulder blades onto your back.",
+          "Ears over the shoulders, crown of the head lifting up.",
+          "Soften the face, especially the eyes and the jaw."
+        ],
+        "tip":"If you find it difficult to get your pelvis in a neutral position, try bending your knees slightly. Drop the tailbone, then once you feel you have it, straighten the knees again without changing the position of the pelvis.",
+        "benefits": [
+          "Prepares the body for all other standing poses.",
+          "Helps to identify imbalances in the body.",
+          "Improves posture.",
+          "Calms the body and mind."
+        ],
+        "image": "mountain.jpg",
+        "description": "Stand tall with feet together...",
+        "difficulty": "Beginner",
+        "category": "Standing"
+      },
+      {
+        "id": 2,
+        "name": "Downward Facing Dog",
+        "asana": "Adho Mukha Svanasana",
+        "steps": [
+            "Start in an all fours position, with your hips above your knees and shoulders above your wrists.",
+            "Bring your hands slightly forwards of your shoulders, with your middle finger pointing forward, spread your fingers.",
+            "Think about creating a suction cup in the middle of your palm by pressing through the outer edges of the palm, the base of the fingers and the fingertips. This is called Hasta Bandha.",
+            "Create a spiral action in your arms by rolling your upper arms away from you and your forearms spiralling inwards (see Beginners’ tips for more detailed instructions).",
+            "Tuck your toes under, and on an exhalation, engage your lower belly drawing the navel back to the spine. Press through your hands and lift your hips back and up to bring yourself into an upside-down V pose.",
+            "Keep your knees bent at first as you find length in your spine.",
+            "Slide your shoulder blades down along the spine, collar bones spread. The base of the neck relaxed.",
+            "Maintaining length in the spine, ‘walk your dog’ by alternately bending and straightening your legs. Eventually bringing both heels towards the floor. They do not have to touch the floor.",
+            "Stay for 5 breaths.",
+            "To come out of the pose, bring your knees back down to the floor and come into Child’s pose or transition into a lunge by stepping one foot towards your hands."
+          ],
+        "tip" : "It’s more important to keep length in the spine than straight legs. So if you find you are rounding in your back or you are hunching your shoulders it’s fine to keep the knees bent as much as you need to so you can enjoy the strecth in your back. And remember your heels don’t need to touch the floor!",
+        "benefits": [
+            "Strengthens the whole body – upper body, arms, shoulders, abdomen, and legs.",
+            "Stretches the back of the body, ankles, calves, hamstrings, spine.",
+            "Calms the mind.",
+            "Stimulates blood circulation."
+          ],
+        "image": "dog.jpg",
+        "description": "Start on your hands and knees...",
+        "difficulty": "Beginner",
+        "category": "Balancing"
+      },
+      {
+        "id": 3,
+        "name": "Tree Pose",
+        "asana" : "Vrikshasana",
+        "steps": [
+          "From Mountain pose.",
+          "Find your Drishti: Gaze at a point at eye level, to help you keep your balance.",
+          "Shift your weight onto your left leg. Ground through the four corners of your left foot.",
+          "Bend your right knee, reach down with your right hand and clasp your ankle.",
+          "Bend your right knee and place your right foot on the inside of your left leg either above or below your knee joint. Your knee is pointing out to the side.",
+          "Press your foot against your inner thigh, and your inner thigh back into your foot.",
+          "Keep your core muscles engaged.",
+          "Firm your left hip in, lengthen your spine, soften your shoulders, and tuck your chin slightly in and back.",
+          "Bring your hands in front of your heart in Anjali Mudra (prayer position) or you can lift your arms up to the ceiling. Hands can remain shoulder-width apart.",
+          "Stay in this pose for 30 seconds to 1 minute.",
+          "Lower your leg and arms down as you exhale, and take a moment in Tadasana.",
+          "Repeat on the other side."
+        ],
+        "tip": "Spread through the toes and press the foot firmly into the floor but try not to clench your foot so that it can make small movements to help keep your balance.",
+        "benefits": [
+          "Improves balance.",
+          "Opens the hips.",
+          "Strengthens the ankles, legs, and spine.",
+          "Lengthens the spine.",
+          "Improves focus / concentration."
+        ],
+        "image": "treep.jpg",
+        "description": "Balance on one foot ...",
+        "difficulty": "Intermediate",
+        "category": "Balancing"
+      },
+      {
+        "id": 4,
+        "name": "Warrior II Pose",
+        "asana": "Virabhadrasana II",
+        "steps": [
+          "To come into Warrior 2 pose, start in Tadasana / Mountain pose at the front of your mat and take a big step back with your left leg, toes pointing slightly in.",
+          "Press the four corners of your feet down, and firm your legs up.",
+          "As you inhale, raise your arms parallel to the floor, keeping your shoulders down and your neck long.",
+          "As you exhale, bend your right knee, keeping your knee over your ankle. If needed, slightly adjust the position of your feet and legs to find stability in the pose.",
+          "Roll the top of your thigh down towards the floor on the right. Press down through your big toe to balance that action.",
+          "Press the top of your left thigh back, and ground the outside of your left foot into the floor.",
+          "Draw your lower abdomen in and up and lengthen your spine. Extend through your collarbones and fingertips. Bring your chin slightly in and back to align your neck with your spine. Look over your right hand.",
+          "Stay in this pose for 5 breaths. To come out of the pose press into your feet and straighten your legs as you inhale. Switch the orientation of your feet and repeat on the other side."
+        ],
+        "tip": "To prevent the front knee from collapsing inwards, wrap the muscles around the outer hip to externally rotate the leg.",
+        "benefits": [
+          "Opens the hips and shoulders.",
+          "Stretches the inner thighs, groin, and chest.",
+          "Strengthens the legs, abs, and arms."
+        ],
+        "image": "warrior.jpg",
+        "description": "Stand with your feet wide apart...",
+        "difficulty": "Intermediate",
+        "category": "Standing"
+      },
+      {
+        "id": 5,
+        "name": "Child’s Pose",
+        "asana": "Balasana",
+        "steps": [
+          "Sit on your heels, knees spread mat distance apart and bring your head towards the floor.",
+          "Your arms can be either stretched out to the front, by your side, or hands underneath your forehead.",
+          "Breathe into your lower back.",
+          "Stay for anywhere between 30 seconds and several minutes in this resting pose.",
+          "To come out, exhale and roll up vertebra by vertebra, or come back to sitting with a straight spine."
+        ],
+        "tip": "Use props or stack your fists to support your forehead if it doesn’t reach the floor comfortably",
+        "benefits": [
+          "Stretches the hips, thighs, lower back, ankles, and knees.",
+          "Helps relieve fatigue.",
+          "Calms the mind and the body.",
+          "Can be used as a resting pose any time."
+        ],
+        "image": "childspose.jpg",
+        "description": "Kneel on the floor...",
+        "difficulty": "Beginner",
+        "category": "Restorative"
+      },
+      {
+        "id": 6,
+        "name": "Cobra Pose",
+        "asana": "Bhujangasana",
+        "steps": [
+          "Lie on your stomach with toes pointing straight back, hands under shoulders, elbows close to the body.",
+          "Engage your legs, pull the belly in and up.",
+          "Inhale, lift your chest from the back of your heart, rolling the collarbones up and firming shoulder blades into the upper back.",
+          "Lift your head last, opening your heart with no weight in the hands yet. Extend out through the toes.",
+          "Exhale, come down. Repeat twice more.",
+          "On the third lift, use your hands to find your full expression. Lift your chest, head follows.",
+          "Maintain a connection from the pelvis to the legs, bring side ribs forward, draw upper arm bones back, lengthen the neck.",
+          "Stay for 5 to 10 breaths, maintaining the backbend through the entire spine.",
+          "To come out, exhale and lower down. Rest in Child’s pose or lying on your belly."
+        ],
+        "tip":"Take your time in this backbend. Only go so far as it feels comfortable. Keep your belly engaged and lower back long. Maintain the connection with your hips on the floor",
+        "benefits": [
+          "Strengthens the back and legs.",
+          "Stretches the front of the body, opening the chest and shoulders.",
+          "Energizes and mobilizes the spine."
+        ],
+        "image": "cobra.jpg",
+        "description": "Lie flat on your back...",
+        "difficulty": "Intermediate",
+        "category": "Balancing"
+      },
+      {
+        "id": 7,
+        "name": "Crow Pose",
+        "asana": "Bakasana",
+        "steps": [
+          "Start in Malasana / Squat pose with the feet apart, knees wider than your hips.",
+          "Place your hands flat in front of you on the floor as if you were in Downward Facing Dog – middle finger pointing forward and with your fingers spread.",
+          "Firm your hands down, pressing through the whole of the hand and your fingertips.",
+          "Keeping your elbows bent, lift the hips high.",
+          "Place your knees on the back of your upper arms as high up as you can, or squeeze the outer upper arms with your knees. Hug the knees and elbows into your mid-line, exhale and round strongly through the upper back drawing your side waist up, using your abdominals.",
+          "Then, squeezing in and up, bring the weight forward so the elbows end up straight over the wrist, bent at 90 degrees.",
+          "Inhale, reach the heart forward and let one foot come up, then bring the other to meet it if possible. Bring the heels and big toes together.",
+          "Stay for about 5/10 breaths all the time pressing firmly through the hands to feel the rebound lift.",
+          "Exhale and come back into a squat position when you are ready."
+        ],
+        "tip": "Fear is often the biggest obstacle when starting with Crow Pose (Bakasana), so it can help to have a cushion nearby at first while you are getting used to it. Place it on the floor in front of your hands. You probably won’t use it but it’s there!",
+        "benefits": [
+          "Strengthens the wrists, arms, shoulders, inner thighs, and core muscles.",
+          "Mobilizes the upper back and hips.",
+          "Over time, this pose will make you feel strong and confident."
+        ],
+        "image": "crow.jpg",
+        "description": "Start in a squatting position ...",
+        "difficulty": "Advanced",
+        "category": "Balancing"
+      },
+      {
+        "id": 8,
+        "name": "Butterfly Pose",
+        "asana": "Baddha Konasana",
+        "steps": [
+          "From a seated position, bring the soles of your feet together, close to your pelvis, allowing your knees to fall out to the sides.",
+          "Ground your sitting bones and lengthen your spine.",
+          "Hold onto the outsides of your feet and press the soles of your feet towards each other.",
+          "If your body allows it, fold forward from the hips, keeping your spine long and your collarbones spread.",
+          "Stay for 5 to 10 breaths.",
+          "To come out of the pose, sit up straight again, lift your knees, and straighten your legs."
+        ],
+        "tip": "Sit up on a cushion or a folded blanket to encourage your pelvis to tilt forward",
+        "benefits": [
+          "Increases hip mobility and stretches the inner thighs.",
+          "Grounding and calming for the mind and body."
+        ],
+        "image": "butterfly.jpg", 
+        "description": "Sit with your legs extended...",
+        "difficulty": "Beginner",
+        "category": "Seated"
+      }
+]
