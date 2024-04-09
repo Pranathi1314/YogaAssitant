@@ -42,7 +42,7 @@ with app.app_context():
 # CORS(app,resources={r"/api/*":{"origins":"*"}})
 CORS(app,supports_credentials=True)
 
-data = pd.read_csv('C:/Users/Dell_Owner/Downloads/PersonalYogaAssitant-a878916b627606996f122081dff6bf7d858183b3/PersonalYogaAssitant/backendSd/yoga - Sheet1 (5).csv')
+data = pd.read_csv('C:\\Users\\Nidhi S Nayak\\Desktop\\webx final mini proj\\PersonalYogaAssitant\\backendSd\\yoga - Sheet1 (5).csv')
 
 
 
