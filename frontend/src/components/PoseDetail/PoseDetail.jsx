@@ -7,6 +7,7 @@ import posesData from '../PoseDetail/poses.json'; // Import pose data from poses
 const PoseDetail = () => {
     const { poseId } = useParams();
     const [pose, setPose] = useState(null);
+    const [isSpeaking, setIsSpeaking] = useState(false); // State to track text-to-speech status
 
     useEffect(() => {
         const foundPose = posesData.find(item => item.id === parseInt(poseId));
@@ -21,6 +22,26 @@ const PoseDetail = () => {
             return null; // Return a placeholder or default image
         }
     };
+
+    
+    const toggleSpeech = () => {
+        if (!window.speechSynthesis) {
+            console.error('Speech synthesis not supported.');
+            return;
+        }
+    
+        if (!isSpeaking) {
+            const utterance = new SpeechSynthesisUtterance();
+            utterance.text = pose.steps.join(' '); // Concatenate steps into a single string
+            utterance.onend = () => setIsSpeaking(false); // Update state when speech ends
+            window.speechSynthesis.speak(utterance);
+        } else {
+            window.speechSynthesis.cancel(); // Stop speech synthesis
+            setIsSpeaking(false); // Update state to not speaking
+        }
+    
+        setIsSpeaking(!isSpeaking); // Toggle speech state
+    };    
 
     if (!pose) return <div>Loading...</div>;
 
@@ -37,13 +58,18 @@ const PoseDetail = () => {
         <div className='instructions'>
             <div className='details'>
             <div className='stepwiseGuide'>
-                <h3 className='stepwiseGuideHeading'>Step by Step</h3>
+                <h3 className='stepwiseGuideHeading'>
+                    Step by Step  &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button onClick={toggleSpeech}>
+                        {isSpeaking ? <i className="fas fa-pause"></i> : <i className="fas fa-play"></i>}
+                        {isSpeaking ? '⏸️ Pause' : '▶️ Play Instructions'}
+                    </button> {/* Add button for text-to-speech */}
+                </h3>
                 <ol>
                     {pose.steps.map((step, index) => (
                     <li key={index}>{step}</li>
                     ))}
                 </ol>
-         
                 </div>
                 {/* <hr className='hori'></hr> */}
                 
@@ -77,33 +103,3 @@ const PoseDetail = () => {
 }
 
 export default PoseDetail
-
-//     // {   "id" : "1",
-//     //     "name" : "Mountain Pose",
-//     //     "otherName" : "Tadasana",
-//     //     "stepwise": {
-//     //         "1": "Stand with your feet hip distance apart.",
-//     //         "2": "Feel your feet, lift and spread the toes then lower them back down and connect with the ground.",
-//     //         "3": "Lift knee caps, without locking the knees back.",
-//     //         "4": "Lift the thigh muscles up and back. Inner thighs slightly turn in",
-//     //         "5":"Draw the pelvic floor muscles together and draw your abdomen slightly in and up to engage Mula Bandha (the pelvic floor muscles) and Uddiyana Bandha (the abdominals up to the diaphragm).",
-//     //         "6":"Open your chest, top of sternum lifts towards the ceiling. Keep ribs soft.",
-//     //         "7":"Broaden your collarbones, firm your shoulder blades onto your back.",
-//     //         "8":"Ears over the shoulders, crown of the head lifting up.",
-//     //         "9":"Soften the face, especially the eyes and the jaw."
-//     //     },
-
-//     //     "tips":{
-//     //         "1":"If you find it difficult to get your pelvis in a neutral position, try bending your knees slightly. Drop the tailbone, then once you feel you have it, straighten the knees again without changing the position of the pelvis.",
-//     //         "2":"Take a block between the thighs. Squeeze the block and roll it slightly backward to feel the engagement and rotation of the thighs."
-//     //     },
-
-//     //     "benefits":{
-//     //         "1" : "Prepares the body for all other standing poses.",
-//     //         "2" : "Helps to identify imbalances in the body.",
-//     //         "3" : "Improves posture.",
-//     //         "4" : "Calms the body and mind."
-//     //     },
-
-//     //     "image" : "../../images/mountain.jpg"
-//     // },

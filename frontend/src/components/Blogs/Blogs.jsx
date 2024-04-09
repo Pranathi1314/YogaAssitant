@@ -68,9 +68,9 @@ const Blogs = () => {
   // ... (existing imports and code)
 
   return (
-    <div>
+    <div className="blog-m">
       <Navbar />
-      <div className="blogs-container">
+      <div className="blogs-container" >
         <div className="main-content">
           <div className="form-container">
             {isLoggedIn && (
@@ -114,8 +114,20 @@ const Blogs = () => {
         </div>
         <div className="side-content">
           <div className="quote-container">
-            <p className="quote">"Yoga is the journey of the self, through the self, to the self."</p>
+            <p className="quote" style={{ fontSize: '22px' }}>"Yoga is the journey of the self, through the self, to the self."</p>
             <p className="quote-author">- The Bhagavad Gita</p>
+          </div>
+          <div className="quote-container">
+            <p className="quote" style={{ fontSize: '22px' }}>"The body is your temple. Keep it pure and clean for the soul to reside in."</p>
+            <p className="quote-author">- B.K.S. Iyengar</p>
+          </div>
+          <div className="quote-container">
+            <p className="quote" style={{ fontSize: '22px' }}>"Yoga is the art of living a happy and peaceful life."</p>
+            <p className="quote-author">- Amit Ray</p>
+          </div> 
+          <div className="quote-container">
+            <p className="quote" style={{ fontSize: '22px' }}>"Yoga teaches us to cure what need not be endured and endure what cannot be cured."</p>
+            <p className="quote-author">- B.K.S. Iyengar</p>
           </div>
         </div>
       </div>
