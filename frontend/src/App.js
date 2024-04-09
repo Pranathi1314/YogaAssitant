@@ -8,6 +8,7 @@ import YogaDetection from './components/YogaDetection/YogaDetection';
 import Mainpage from './components/Mainpage/Mainpage';
 import PosePage from './components/PosePage/PosePage';
 import PoseDetail from './components/PoseDetail/PoseDetail';
+import Recommendation from './components/Recommendation/Recommendation';
 
 
 function App() {
@@ -18,10 +19,11 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/home' element={<Homepage/>}/>
       <Route path='/blogs' element={<Blogs/>}/>
-      <Route path='/yogaDetection' element={<YogaDetection/>}/>
+      {/* <Route path='/yogaDetection' element={<YogaDetection/>}/> */}
       <Route path='/' element={<Mainpage/>}/>
       <Route path='/poses' element={<PosePage/>}/>
       <Route path='/posedetail/:poseId' element={<PoseDetail/>}/>
+      <Route path='/myrecommender' element={<Recommendation/>}/>
     </Routes>
     </BrowserRouter>
   );

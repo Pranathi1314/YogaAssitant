@@ -2,10 +2,13 @@ from flask import Flask, jsonify,request,session,Response,render_template
 from flask_cors import CORS,cross_origin
 from flask_bcrypt import Bcrypt
 import cv2
+import pandas as pd
+import difflib
+import pickle
 
 # Import your pose detection and classification functions
-import mediapipe as mp
-from yoga import detectPose, classifyPose
+
+
 
 from flask_jwt_extended import create_access_token
 from flask_jwt_extended import get_jwt_identity
@@ -39,38 +42,75 @@ with app.app_context():
 # CORS(app,resources={r"/api/*":{"origins":"*"}})
 CORS(app,supports_credentials=True)
 
-# Initialize mediapipe pose class and drawing utils
-mp_pose = mp.solutions.pose
-mp_drawing = mp.solutions.drawing_utils
+data = pd.read_csv('C:/Users/Dell_Owner/Downloads/PersonalYogaAssitant-a878916b627606996f122081dff6bf7d858183b3/PersonalYogaAssitant/backendSd/yoga - Sheet1 (5).csv')
 
-pose = mp_pose.Pose(static_image_mode=False, min_detection_confidence=0.5, model_complexity=1)
 
+
+def load_model_components():
+    """Loads the Asana recommendation model components from a pickle file.
+
+    Returns:
+        dict: A dictionary containing the loaded model components (vectorizer, similarity, data).
+    """
+
+    with open('final_trained_model.pkl', 'rb') as f:
+        model_components = pickle.load(f)
+    return model_components
+
+model_components = load_model_components()  # Uncomment to load on startup
+
+@app.route('/api/unique_pain', methods=['GET'])
+def get_unique_pain():
+    try:
+        unique_pain = data['Pain'].unique().tolist()
+        print("The list is :", unique_pain)
+        return jsonify(unique_pain)
+    except KeyError as e:
+        print(f"Error: {e}. 'Pain' column not found in the data.")
+        return jsonify({"error": "Pain column not found"}), 500
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({"error": "Internal Server Error"}), 500
+
+@app.route('/api/recommend', methods=['POST'])
+@app.route('/api/recommend', methods=['POST'])
+def recommend():
+    global vectorizer, similarity, data  # Declare and modify global variables
+
+    vectorizer = model_components['vectorizer']
+    similarity = model_components['similarity']
+    data = model_components['data']  # Access components from dictionary
+
+    pain_name = request.json['pain']  # Access JSON data from the request body
+    
+    list_of_all_pain = data['Pain'].tolist()
+    find_close_match = difflib.get_close_matches(pain_name, list_of_all_pain)
+    
+    if find_close_match:
+        close_match = find_close_match[0]
+        index_of_close_match = data[data['Pain'] == close_match].index[0]
+        similarity_scores = list(enumerate(similarity[index_of_close_match]))
+        sorted_similar_poses = sorted(similarity_scores, key=lambda x: x[1], reverse=True)
+        
+        # Get recommended poses and their image URLs
+        recommended_data = []
+        for index, _ in sorted_similar_poses[:6]:
+            pose_name = data.loc[index, 'AName']
+            image_url = data.loc[index, 'Photo']  # Assuming 'Photo' is the column containing image URLs
+            recommended_data.append({'pose': pose_name, 'image': image_url})
+
+        return jsonify(recommended_data)
+    else:
+        return jsonify(message="No recommendations available for the selected pain."), 404
+    
+    
 @app.route('/')
 def index():
     return render_template('index.html')
 
-def generate_frames():
-    video = cv2.VideoCapture(0)  # Open webcam
-    while True:
-        success, frame = video.read()
-        if not success:
-            break
-        else:
-            frame, landmarks = detectPose(frame, pose)  # Call your pose detection function
-            if landmarks:
-                # Call classifyPose function with both landmarks and frame
-                label = classifyPose(landmarks, frame)  
-                # Draw label on frame
-                cv2.putText(frame, label, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
-            ret, buffer = cv2.imencode('.jpg', frame)
-            frame = buffer.tobytes()
-            yield (b'--frame\r\n'
-                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 
-@app.route('/api/video_feed')
-def video_feed():
-    return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
 
 
 @app.route("/api/login",methods=["POST"])
