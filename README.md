@@ -1,6 +1,6 @@
 # YogaAssist
 
-This is for **ROSPL LAB**.
+This project is for **ROSPL LAB**.
 YogaAssist is an AI-powered yoga assistant application that helps users improve their yoga practice by providing real-time pose correction, recommendations for personalized yoga routines, and access to curated content. The project leverages Python with OpenCV for pose detection, the Gemini API for accessing relevant yoga content and for detecting the pose performed, a recommendation system for tailored routines, and a React-based frontend for a smooth user experience.
 
 ## Features
