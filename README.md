@@ -30,3 +30,4 @@ cd yogaassist
 
 <img width="935" alt="ya1" src="https://github.com/user-attachments/assets/ee56bf2f-931e-4177-a205-f36ac22021f8">
 
+![image](https://github.com/user-attachments/assets/5178aa82-9009-4039-9758-603204522560)
