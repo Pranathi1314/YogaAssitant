@@ -9,23 +9,12 @@ YogaAssist is an AI-powered yoga assistant application that helps users improve 
 - **Yoga Content Access**: Fetches curated yoga-related content such as routines, tips, and tutorials using the Gemini API.
 - **User-Friendly Interface**: A React-based frontend that provides an intuitive interface for users to interact with the app.
 
-## Table of Contents
-
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Technologies](#technologies)
-4. [API Reference](#api-reference)
-5. [Contributing](#contributing)
-6. [License](#license)
-
-## Installation
-
 ### Prerequisites
 
 - Python 3.x
 - Node.js & npm
 - OpenCV library
-- Gemini API access
+- Gemini API 
 - React
 
 ### Clone the Repository
